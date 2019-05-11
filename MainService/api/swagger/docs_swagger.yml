@@ -1,0 +1,76 @@
+swagger: "2.0"
+info:
+  title: "AKNumberService API"
+  description: "API for AKNumberService translating number digit to english number text"
+  termsOfService: "http://kammorah.com/terms"
+  version: "0.0.1"
+  contact:
+    responsibleOrganization: "Ahmed Kammorah"
+    responsibleDeveloper: "Ahmed Kammorah"
+    email: "Ahmedkammorah@gmail.com"
+    url: "www.kammorah.com"
+
+# host: "localhost:5000"
+basePath: "/"
+operationId: "getmyData"
+schemes:
+  - http
+  - https
+
+paths:
+  /api/number/{number_digit}:
+    post:
+      tags:
+          - "AKNumberServiceAPI"
+      summary: "Translate Number digits to Engilsh Text"
+      description: "Translate Number digits API to Engilsh Text"
+      operationId: "translateNumber"
+      consumes:
+        - "application/json"
+        - "application/xml"
+      produces:
+        - "application/xml"
+        - "application/json"
+      parameters:
+        - in: path
+          name: number_digit
+          schema:
+            type: integer
+          required: true
+          description: Numeric digits for number
+      responses:
+        405:
+          description: "Invalid input"
+    get:
+      tags:
+          - "AKNumberServiceAPI"
+      summary: "Translate Number digits to Engilsh Text"
+      description: "Translate Number digits API to Engilsh Text"
+      operationId: "translateNumber"
+      consumes:
+        - "application/json"
+        - "application/xml"
+      produces:
+        - "application/xml"
+        - "application/json"
+      parameters:
+        - in: path
+          name: number_digit
+          schema:
+            type: integer
+          required: true
+          description: Numeric digits for number
+      responses:
+        405:
+          description: "Invalid input"
+definitions:
+  ApiResponse:
+    type: "object"
+    properties:
+      code:
+        type: "integer"
+        format: "int32"
+      type:
+        type: "string"
+      message:
+        type: "string"
