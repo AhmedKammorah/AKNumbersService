@@ -2,15 +2,12 @@
 # @Author: ahmedkammorah
 # @Date:   2017-01-22 02:45:44
 # @Last Modified by:   Ahmed kammorah
-# @Last Modified time: 2019-05-11 15:35:07
+# @Last Modified time: 2019-05-13 11:23:02
 
 import os
 
 BASE_HOST = os.environ.get('BASE_HOST', 'localhost')
 BASE_REST_PORT = 5000
-
-RPC_SERVER = BASE_HOST
-RPC_PORT = 50051
 
 # AUTH
 AK_API_JWT_SECRET_KEY = os.environ.get('AK_API_JWT_SECRET_KEY', None)

@@ -2,7 +2,7 @@
 # @Author: Ahmed kammorah
 # @Date:   2019-05-11 13:16:02
 # @Last Modified by:   Ahmed kammorah
-# @Last Modified time: 2019-05-11 14:16:18
+# @Last Modified time: 2019-05-13 11:18:44
 
 from flask import Flask
 from flask import request
@@ -82,9 +82,12 @@ def protected():
         description: User login failed.
     """
     print ('protected')
-    return 'Welcome %s to AKEmailServices API' % current_identity
+    return 'Welcome %s to AKNumberServices API' % current_identity
 
 @app.route("/")
 def helloworld():
     '''Welcome API Test'''
-    return "Welcome to AKEmailServices API"
+    return "Welcome to AKNumberServices API"
+
+
+    

@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  ak_email_service_rest:
+    # tty: true   # for development mode because use bash as my command to not exit
+    image: ahmedkammorah/ak_numbers_service
+    command: sh docker-entrypoint.sh
+    # env_file:
+    #  - ./ak_variables.env
+    environment:
+     - AK_APP_ENV=dev
+    restart: on-failure
+    ports:
+      - "5000:5000"
+  
