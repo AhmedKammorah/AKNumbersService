@@ -49,7 +49,12 @@ translate_number(number)
 * Code Dir Tree
 	```
 	./
-		MainService/    <Your main  code dir> 
+		MainService/    <Your main  code dir>
+            main/
+                ak_number_utils.py   (The main Util code)
+            api/
+            api/
+            test/ 
 		Readme.md
 		docker-entrypoint.sh
 		..
